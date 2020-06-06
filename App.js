@@ -1,10 +1,8 @@
-import React from 'react';
-import { AppTabsScreen } from "./src/routes/AppTabsScreen";
+import React from "react";
+import { AppNavigator } from "./src/routes/AppNavigator";
 
 const App = () => {
-  return (
-    <AppTabsScreen/>
-  );
-}
+  return <AppNavigator />;
+};
 
 export default App;
