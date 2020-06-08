@@ -5,8 +5,11 @@ import yelp from "../api/yelp";
 
 export default function SearchScreen() {
   const [value, setValue] = useState("");
+
   const [results, setResults] = useState([]); // results could be renamed "restaurants" or "businesses"
   const [errorMessage, setErrorMessage] = useState("");
+
+  console.log(results);
 
   const searchApi = async (searchValue) => {
     console.log("hi there");
@@ -24,12 +27,9 @@ export default function SearchScreen() {
     }
   };
 
-  useEffect(() => {
-    searchApi("pasta");
-  }, []);
-
-  //searchApi('pasta')
-  // BAD CODE. everytime the component rerenders that function is being called which clogs up the react DOM resulting in performance issues.
+  // useEffect(() => {
+  //   searchApi("pasta");
+  // }, []);
 
   return (
     <ScrollView style={styles.container}>
@@ -44,8 +44,6 @@ export default function SearchScreen() {
         ) : (
           <Text> We have found {results.length} results.</Text>
         )}
-        {/* <Text> We have found {results.length} results. </Text>
-        <Text> {errorMessage}</Text> */}
       </View>
     </ScrollView>
   );

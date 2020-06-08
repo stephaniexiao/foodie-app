@@ -8,7 +8,7 @@ const Tab = createBottomTabNavigator();
 
 export const AppTabsScreen = () => {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator initialRouteName="Search">
       <Tab.Screen name="Home" component={HomeStackScreen} />
       <Tab.Screen name="Foods" component={FoodsScreen} />
       <Tab.Screen name="Search" component={SearchScreen} />
