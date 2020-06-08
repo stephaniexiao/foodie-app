@@ -1,11 +1,11 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { AppTabsScreen } from "../routes/AppTabsScreen";
+import { AppDrawerScreen } from "../routes/AppDrawerScreen";
 
 export const AppNavigator = (props) => {
   return (
     <NavigationContainer>
-      <AppTabsScreen />
+      <AppDrawerScreen />
     </NavigationContainer>
   );
 };
