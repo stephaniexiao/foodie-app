@@ -1,9 +1,9 @@
 import React from 'react';
-import { AppTabsScreen } from "./src/routes/AppTabsScreen";
+import AppNavigator from "./src/routes/AppNavigator";
 
 const App = () => {
   return (
-    <AppTabsScreen/>
+    <AppNavigator />
   );
 }
 

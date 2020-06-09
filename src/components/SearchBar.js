@@ -16,11 +16,12 @@ export const SearchBar = (props) => {
             placeholder=" What are you craving?" 
             value={props.value}
             onChangeText={(newText) => props.onInputChange(newText)}
+            onEndEditing={() => props.onInputSubmit()}
         />
         <AntDesign 
             name="search1" 
             size={25} color="#123C69" 
-            onPress={() => alert("doesn't work yet")}
+            onPress={() => props.onInputSubmit()}
         />
     </View>
   );

@@ -1,11 +1,17 @@
 import React from 'react';
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import { EvilIcons } from '@expo/vector-icons'; 
 
-export default function HomeScreen({ navigation }) {
+export function HomeScreen ({navigation}) {
     return (
       <View style={styles.container}>
           <Text style={styles.text}>WELCOME TO</Text>
           <Text style={styles.foodie}>FOODIE</Text>
+          <View style={styles.settings}>
+            <TouchableOpacity onPress={() => navigation.push("Settings")}>
+              <EvilIcons name="gear" size={36} color="#ac3b61" />
+            </TouchableOpacity>
+          </View>
       </View>
     );
   }
@@ -30,5 +36,9 @@ const styles = StyleSheet.create({
     fontSize: 60,
     fontFamily: "Helvetica",
     fontWeight: "700",
+  },
+  settings: {
+    alignSelf: "center",
+    marginTop: 15
   }
 });
