@@ -25,18 +25,3 @@ const styles = StyleSheet.create({
     backgroundColor: "#87CEEB",
   },
 });
-
-//ParentComponent passing props
-/*
-
-<CustomActionButton 
-  onPress
-  width
-  height
-  borderRadius
-  title
-/>
-
-
-
-*/

@@ -3,7 +3,6 @@ import { StyleSheet, View, Text, ScrollView, SafeAreaView } from "react-native";
 import { SearchBar } from "../components/SearchBar";
 import { useResults } from "../hooks/useResults";
 import { ResultsList } from "../components/ResultsList";
-import { CustomActionButton } from "../components/CustomActionButton";
 
 export default function SearchScreen() {
   const [value, setValue] = useState("");
