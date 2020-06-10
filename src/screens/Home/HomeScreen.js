@@ -1,14 +1,23 @@
-import React from 'react';
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
+import React from "react";
+import { StyleSheet, Text, View, TouchableOpacity } from "react-native";
 
 export default function HomeScreen({ navigation }) {
-    return (
-      <View style={styles.container}>
-          <Text style={styles.text}>WELCOME TO</Text>
-          <Text style={styles.foodie}>FOODIE</Text>
-      </View>
-    );
-  }
+  return (
+    <View style={styles.container}>
+      <Text style={styles.text}>WELCOME TO</Text>
+      <Text style={styles.foodie}>FOODIE</Text>
+      <TouchableOpacity
+        onPress={() =>
+          navigation.push("SettingsScreen", {
+            title: "Settings",
+          })
+        }
+      >
+        <Text> Go to Settings </Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -30,5 +39,5 @@ const styles = StyleSheet.create({
     fontSize: 60,
     fontFamily: "Helvetica",
     fontWeight: "700",
-  }
+  },
 });
